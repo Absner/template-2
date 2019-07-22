@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -50,6 +51,7 @@ import { AuthLayoutComponent } from './layouts/auth/auth-layout.component';
 
 import { AppRoutes } from './app.routing';
 
+
 @NgModule({
   exports: [
     MatAutocompleteModule,
@@ -93,13 +95,13 @@ export class MaterialModule {}
         BrowserAnimationsModule,
         FormsModule,
         RouterModule.forRoot(AppRoutes),
-        HttpModule,
         MaterialModule,
         MatNativeDateModule,
         SidebarModule,
         NavbarModule,
         FooterModule,
-        FixedpluginModule
+        FixedpluginModule,
+        HttpClientModule
     ],
     declarations: [
         AppComponent,
