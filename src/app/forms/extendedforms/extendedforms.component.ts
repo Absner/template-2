@@ -24,6 +24,8 @@ export class ExtendedFormsComponent implements OnInit {
     selectedValue: string;
     currentCity: string[];
 
+    public startDate: Date  = new Date();
+
     selectTheme = 'primary';
     cities = [
       {value: 'paris-0', viewValue: 'Paris'},
